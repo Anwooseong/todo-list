@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from 'react';
+import LoginModal from './components/Login/LoginModal';
+import Wrapper from './components/Helper/Wrapper';
+import Home from './components/Home/Home';
 
 function App() {
+  const inputId = useRef()
+  const inputPassword = useRef()
+
+  const [isLogin, setIsLogin] = useState(false)
+
+
+  const submitLoginHandler = (event) => {
+    event.preventDefault()
+    const enteredId = inputId.current.value
+    const enteredPassword = inputPassword.current.value
+    setIsLogin(true)
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Wrapper>
+        {isLogin && <LoginModal onSubmit={submitLoginHandler} />}
+        <Home />
+      </Wrapper>
+    </React.Fragment>
   );
 }
 

@@ -1,0 +1,49 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 1rem;
+    background-color: rgb(218, 221, 221);
+    font: inherit;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-title {
+    font: inherit;
+    border: none;
+    border-bottom: 2px solid #3a3cc2;
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 30px;
+    width: 30rem;
+    margin: 2rem 3rem 2rem 0;
+}
+
+.label-title {
+    font: inherit;
+    color: #3a3cc2;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
